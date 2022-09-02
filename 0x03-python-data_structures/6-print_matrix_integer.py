@@ -7,7 +7,9 @@ def print_matrix_integer(matrix=[[]]):
         for i in range(len(matrix)):
             lst = matrix[i]
             for j in range(len(lst)):
-                if j == len(lst):
+                if j == (len(lst) - 1):
                     print("{:d}".format(lst[j]))
-                print("{:d}".format(lst[j]), end=' ')
-            print()
+                else:
+                    print("{:d}".format(lst[j]), end=' ')
+            if i == (len(lst) - 1):
+                print()
